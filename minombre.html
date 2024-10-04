@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce tu Nombre</title>
+    <link rel="stylesheet" href="css/iroom.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Título -->
+    <div id="titulo">Introduce tu Nombre</div>
+
+    <!-- Menú -->
+    <div id="menu">
+        <a href="index.html">Volver a la página principal</a>
+    </div>
+
+    <!-- Formulario para ingresar el nombre -->
+    <div id="contenedor">
+        <h2>Por favor, introduce tu nombre:</h2>
+        <form id="form-nombre">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+            <button type="submit">Guardar Nombre</button>
+        </form>
+    </div>
+
+    <script>
+        // Almacenar el nombre en Local Storage cuando se envíe el formulario
+        document.getElementById('form-nombre').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevenir que el formulario se envíe de forma predeterminada
+            var nombre = document.getElementById('nombre').value;
+            if (nombre) {
+                // Guardar el nombre en Local Storage
+                localStorage.setItem('fname', nombre);
+                // Redirigir a la página principal
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Contenedor */
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Título */
+#titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #3498db, #9b59b6);
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+    #titulo:hover {
+        transform: scale(1.2);
+    }
+
+/* Menú */
+#menu {
+    background-color: #34495e;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+    #menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 12px 25px;
+        margin: 0 15px;
+        border: 2px solid transparent;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+
+        #menu a:hover {
+            background-color: #2c3e50;
+            border: 2px solid white;
+        }
+
+/* Dinamica */
+#informacion {
+    background-color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#contenido {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+}
+
+#datos-habitacion, #sensores {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    #datos-habitacion h2, #sensores h2 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    #datos-habitacion h2:hover, #sensores h2:hover{
+        text-decoration: underline;
+    }
+
+    #datos-habitacion ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+        #datos-habitacion ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+#datos-habitacion a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+#datos-habitacion a:hover {
+    background-color: #2980b9;
+}
+
+
+    /* Imagen de la habitación */
+    #datos-habitacion img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    /* Tabla de sensores */
+    #sensores table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #sensores th, #sensores td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        font-size: 18px;
+    }
+
+    #sensores th {
+        background-color: #ecf0f1;
+        font-weight: bold;
+    }
+
+    /* Imagen de los sensores */
+    #sensores img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+
+/* Contenido de configuración */
+#configuracion {
+    display: flex;
+    justify-content: space-between;
+    border: 1px dotted black;
+    padding: 20px;
+    margin: 20px 0;
+}
+    #configuracion h2:hover {
+    text-decoration: underline;
+    }
+
+/* Columnas */
+.column-left, .column-right {
+    width: 45%;
+    padding: 30px;
+    border: 1px dotted black;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: background-color 0.5s ease;
+}
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+/* Pie de página */
+#pie {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #34495e;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+    #pie:hover {
+        text-decoration: underline;
+    }
+
+    #pie a {
+        text-decoration: none;
+        color: white;
+    }
+        #pie a:hover {
+            text-decoration: underline;
+        }
+
+#form-nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos dentro del formulario */
+    margin: 0 auto; /* Asegura que el formulario esté centrado horizontalmente */
+}
+
+    #form-nombre label {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Room - Página Principal</title>
+    <link rel="stylesheet" href="css/iroom.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Título -->
+    <div id="titulo">
+        Smart Room Proyect
+    </div>
+
+    <!-- Menú -->
+    <div id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#datos-habitacion">Datos de la Habitación</a>
+        <a href="#sensores">Sensores</a>
+        <a href="config.html">Configuración</a>
+        <a href="minombre.html">Nombre</a>
+    </div>
+
+    <!-- Información dinámica -->
+    <div id="informacion">
+        <p id="mensaje-bienvenida"></p>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="contenido">
+        <!-- Datos de la habitación -->
+        <div id="datos-habitacion">
+            <h2>Datos de la Habitación</h2>
+            <ul>
+                <li>Ubicación: Madrid</li>
+                <li>Temperatura Actual: 22°C</li>
+                <li>Humedad: 45%</li>
+                <li><a href="https://www.google.com/maps?q=40.4168,-3.7038" target="_blank">Ver en Google Maps</a></li>
+            </ul>
+            <img src="imagenes/habitacion.jpg" alt="Imagen de la habitación">
+        </div>
+
+        <!-- Datos de los sensores -->
+        <div id="sensores">
+            <h2>Datos de los Sensores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sensor</th>
+                        <th>Estado</th>
+                        <th>Última Lectura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temperatura</td>
+                        <td>Activo</td>
+                        <td>22°C</td>
+                    </tr>
+                    <tr>
+                        <td>Humedad</td>
+                        <td>Activo</td>
+                        <td>45%</td>
+                    </tr>
+                    <tr>
+                        <td>Presión</td>
+                        <td>Inactivo</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td>Luz</td>
+                        <td>Activo</td>
+                        <td>80%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Imagen de los sensores -->
+            <img src="imagenes/sensores.jpg" alt="Imagen de los sensores" style="width: 100%; height: auto; margin-top: 20px; border-radius: 8px;">
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <div id="pie">
+        <a href="https://uah.es/es/" target="_blank">Universidad de Alcalá</a>
+    </div>
+
+    <script>
+        // Recuperar el nombre del Local Storage y mostrar un mensaje de bienvenida
+        var nombre = localStorage.getItem('fname');
+        var mensajeBienvenida = document.getElementById('mensaje-bienvenida');
+
+        if (nombre) {
+            mensajeBienvenida.textContent = "Hola " + nombre + ": Bienvenido a Smart Room.";
+        } else {
+            mensajeBienvenida.textContent = "Hola visitante: Bienvenido a Smart Room.";
+        }
+    </script>
+</body>
+</html>
